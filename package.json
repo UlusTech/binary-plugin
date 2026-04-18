@@ -1,9 +1,9 @@
 {
   "name": "binary-plugin",
-  "module": "main.ts",
+  "module": "./lib/main.ts",
   "type": "module",
   "devDependencies": {
-    "@types/bun": "latest"
+    "@biomejs/biome": "2.4.12"
   },
   "peerDependencies": {
     "typescript": "^5"
