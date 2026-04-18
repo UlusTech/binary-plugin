@@ -1,0 +1,20 @@
+{
+    // 1. Tell the extension where to look for imports (the root)
+    "protobuf.includes": [
+        "${workspaceFolder}"
+    ],
+
+    // 2. Configure the Formatter (since Biome doesn't handle .proto yet)
+    "protobuf.formatOnSave": true,
+    "protobuf.formatter.alignFields": true,
+
+    "protobuf.protoc.path": "/usr/bin/protoc",
+    "protobuf.protoc.options": [
+        "--proto_path=${workspaceFolder}",
+        // Use the relative path from the workspace root
+        "--plugin=protoc-gen-ts_proto=./ts-lib/node_modules/.bin/protoc-gen-ts_proto",
+        "--ts_proto_out=./ts-lib/src/generated",
+        "--kotlin_out=./paper-plugin/src/main/kotlin"
+    ],
+    "protobuf.protoc.compileOnSave": true
+}
