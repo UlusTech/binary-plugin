@@ -16,7 +16,7 @@
     "noEmit": true,
 
     // Add bun-types here OR via @types/bun package, not both
-    // "types": ["bun-types"],
+    "types": ["bun-types"],
 
     // Best practices
     "strict": true,
@@ -29,5 +29,6 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false
-  }
+  },
+  "include": ["lib/**/*"]
 }
